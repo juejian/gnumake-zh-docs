@@ -1,0 +1,22 @@
+# define all common variable in makefile,
+# other makefile files must include it at their start
+CC = gcc
+CFLAGS = -std=c17 -finput-charset=utf-8 -fexec-charset=gbk -g -m64
+
+SRC_PATH = .
+DF_DIRS = ./d
+DIRS = $(shell find $(SRC_PATH) -type d)
+
+# *.c in root dir and *.c in all subdir of workspace
+SRC += $(foreach dir, $(DIRS), $(wildcard $(dir)/*.c))
+OD = $(patsubst %.c,%.d, $(SRC))
+OBJ = bin/
+# OD = $(SRC:%.c=%.d)
+
+# DIRS=. ./bin ./d ./debug ./header ./module-net ./module-sql
+# SRC= ./main.c ./module-net/mnet.c ./module-sql/msql.c
+# OD=./main.d ./module-net/mnet.d ./module-sql/msql.d
+
+# ./main.d
+# mnet.o: module-net/mnet.c module-net/../header/mnet.h \
+#  module-net/../header/base.h

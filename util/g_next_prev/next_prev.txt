@@ -1,0 +1,74 @@
+---
+
+- [下一章：2.GNU make 介绍](/introduce.md)
+
+---
+
+- [上一章：1.概述](/overview.md)
+- [下一章：3.Makefile 总述](/summarize.md)
+
+---
+
+- [上一章：2.GNU make 介绍](/introduce.md)
+- [下一章：4.Makefile 规则](/rule.md)
+
+---
+
+- [上一章：3.Makefile 总述](/summarize.md)
+- [下一章：5.Makefile 命令](/command.md)
+
+---
+
+- [上一章：4.Makefile 规则](/rule.md)
+- [下一章：6.Makefile 变量](/variable.md)
+
+---
+
+- [上一章：5.Makefile 命令](/command.md)
+- [下一章：7.Makefile 条件执行](/condition.md)
+
+---
+
+- [上一章：6.Makefile 变量](/variable.md)
+- [下一章：8.make 内嵌函数](/function.md)
+
+---
+
+- [上一章：7.Makefile 条件执行](/condition.md)
+- [下一章：9.执行 make](/make-run.md)
+
+---
+
+- [上一章：8.make 内嵌函数](/function.md)
+- [下一章：10.Makefile 隐含规则](/implicit-rule.md)
+
+---
+
+- [上一章：9.执行 make](/make-run.md)
+- [下一章：11.使用make更新静态库文件](/update-static-lib.md)
+
+---
+
+- [上一章：10.Makefile 隐含规则](/implicit-rule.md)
+- [下一章：12.GNU make的特点](/make-feature.md)
+
+---
+
+- [上一章：11.使用make更新静态库文件](/update-static-lib.md)
+- [下一章：13.和其它版本的兼容](/compatibility.md)
+
+---
+
+- [上一章：12.GNU make的特点](/make-feature.md)
+- [下一章：14.Makefile 的约定](/conventions.md)
+
+---
+
+- [上一章：13.和其它版本的兼容](/compatibility.md)
+- [下一章：15.make 的常见错误信息](/errmsg.md)
+---
+
+
+- [上一章：14.Makefile 的约定](/conventions.md)
+
+success,list count=15

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- offline -->
+<head>
+	<meta charset="UTF-8">
+	<title>GNUmakefile 中文 doc</title>
+	<link rel="icon" href="_media/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="Description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<!-- offline import -->
+	<link rel="stylesheet" href="_style/vue.css">
+	<link rel="stylesheet" href="_style/mermaid.min.css">
+	<link rel="stylesheet" href="_style/katex.min.css">
+
+	<!-- custom -->
+	<link rel="stylesheet" href="./_style/_custom.min.css">
+
+</head>
+
+<body>
+	<div id="app">loading...</div>
+
+	<!-- offline import -->
+	<script src="_scripts/mermaid.min.js"></script>
+
+	<script>
+		var num = 0;
+		mermaid.initialize({
+			startOnLoad: false
+		});
+
+		window.$docsify = {
+			name: 'GNUmake-zh-docs',
+			// repo: 'https://gitee.com/jmsword/gnumake-zh-docs',
+			loadSidebar: true,
+			// maxLevel: 4,
+			subMaxLevel: 4,
+			// loadNavbar: true,
+
+			// alias: {
+			//   '/.*/_sidebar.md': '/_sidebar.md'
+			// }
+			relativePath: false,
+			coverpage: true,
+			auto2top: true,
+			// autoHeader: true,
+			// executeScript: true,
+			formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
+
+			search: {
+				paths: 'auto', // or 'auto'
+				placeholder: {
+					'/': '搜索'
+				},
+				noData: {
+					'/': '找不到结果',
+				}
+			},
+			markdown: {
+				renderer: {
+					code: function (code, lang) {
+						if (lang === "mermaid") {
+							return (
+								'<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+							);
+						}
+						return this.origin.code.apply(this, arguments);
+					}
+				}
+			}
+		}
+
+		function set_iframe_height(h)
+		{
+			var nodes = document.getElementsByTagName("iframe");
+			if (nodes) {
+				for (let i = 0; i < nodes.length; i++) {
+					nodes[i].height = h;
+				}
+			}
+
+			return;
+		}
+
+		setTimeout(() => {
+			console.log('set_iframe_width');
+			set_iframe_height(550);
+		}, 1000);
+
+	</script>
+
+	<!-- offline import -->
+	<script src="_scripts/docsify-katex.js"></script>
+	<script src="_scripts/docsify.min.js"></script>
+	<script src="_scripts/search.min.js"></script>
+	<script src="_scripts/prism-makefile.min.js"></script>
+	<script src="_scripts/prism-c.min.js"></script>
+	<script src="_scripts/zoom-image.min.js"></script>
+
+</body>
+
+</html>

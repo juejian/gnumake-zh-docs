@@ -1,0 +1,32 @@
+# generate ".d" file for all ".c" file and stored in "d"
+include common-mf
+
+.PHONY: gdf clean pr
+
+gdf: $(OD)
+
+%.d: %.c
+	@set -e; rm -f $@;\
+	$(CC) -MM $(CPPFLAGS) $< > $@.$$$$;\
+	cat $@.$$$$;echo $*;\
+	sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.$$$$ > $@; \
+	rm -f $@.$$$$
+
+clean:
+	-find . -name "*.d"  | xargs rm -f
+	-find . -name "*.d.*"  | xargs rm -f
+
+# use it to test the value of variable
+pr:
+	-@echo DIRS=$(DIRS)
+	-@echo SRC=$(SRC)
+	-@echo OD=$(OD)
+
+
+# DIRS=. ./bin ./d ./debug ./header ./module-net ./module-sql
+# SRC= ./main.c ./module-net/mnet.c ./module-sql/msql.c
+# OD=./main.d ./module-net/mnet.d ./module-sql/msql.d
+
+# ./main.d
+# mnet.o: module-net/mnet.c module-net/../header/mnet.h \
+#  module-net/../header/base.h

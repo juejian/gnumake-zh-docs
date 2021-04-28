@@ -1,0 +1,126 @@
+/* 针对 themes/vue.css 定制 */
+:root{
+    /* mac: */
+    /* --monaco-monospace-font: "SF Mono", Monaco, Menlo, Courier, monospace; */
+    /* win */
+    /* --monaco-monospace-font: Consolas, "Courier New", monospace; */
+    /* linux */
+    /* --monaco-monospace-font: "Ubuntu Mono", "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace */
+	--base-font-size: 16px;
+    /* --base-text-color: #34495e; */
+    --base-text-color: #34495e;
+    /* --base-font-family: Segoe WPC,Segoe UI,Microsoft YaHei,sans-serif; */
+    /* --base-font-family: Georgia,"Times New Roman",Times,sans-serif; */
+	--base-font-family: -apple-system,system-ui,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+	--base-code-font-family: "Source Code Pro",Consolas,Menlo,Monaco,"Courier New",monospace;
+	--base-code-font-size: 14px;
+}
+
+body {
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size, 16px);
+    line-height: var(--base-line-height, 1.5em);
+    color:var(--base-text-color,#34495e);
+}
+
+.markdown-section a{
+    font-weight: unset;
+}
+
+.markdown-section ol,.markdown-section p,.markdown-section ul {
+    line-height: 1.8em;
+}
+
+.markdown-section em {
+    color: #000;
+}
+
+code{
+    font-family: var(--base-code-font-family, "SF Mono", Monaco, Menlo, Consolas, "Ubuntu Mono", "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace);
+    tab-size: 4;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+}
+
+.markdown-section>:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) code {
+    font-size: var(--base-code-font-size);
+}
+
+
+/* code highlight start */
+.token.directive-hash,.token.directive.keyword{
+    color: rgb(43, 145, 175);
+}
+
+.token.function{
+    color: #a31515
+}
+
+.token.keyword{
+    color:#0000ff
+}
+
+.token.comment {
+    color: green;
+}
+
+.token.string {
+    color: #a31515;
+}
+
+/* .token.cdata,.token.comment,.token.prolog {
+    color: #a0a1a7
+}
+
+.token.doctype {
+    color: #a626a4
+}
+
+.token.selector {
+    color: #e45649
+}
+
+.token.string {
+     color: #50a14f
+}
+
+
+.token.boolean,.token.number {
+    color: #f5871f;
+}
+
+.token.punctuation {
+    color: #525252
+}
+
+.token.property {
+    color: #c08b30
+}
+
+.token.tag,.token.variable,.token.attr-name{
+    color: #c82829;
+}
+
+
+.language-css .token.string,.style .token.string,.token.entity,.token.url {
+    color: #22a2c9
+}
+
+.token.attr-value,.token.control,.token.directive,.token.unit {
+    color: var(--theme-color,#42b983)
+}
+
+.token.atrule,.token.regex,.token.statement {
+    color: #22a2c9
+}
+
+.token.placeholder {
+    color: #3d8fd1
+}
+
+
+.token.important {
+    color: #c94922
+} */
+
+/* code highlight end */
